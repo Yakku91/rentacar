@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+        {% block searchbar %}{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    {{ form_start(form) }}
+                    <div class="my-custom-class-for-errors">
+                        {{ form_errors(form) }}
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            {{ form_row(form.formOfAddress) }}
+                        </div>
+                        <div class="col">
+                            {{ form_row(form.firstName) }}
+                        </div>
+                        <div class="col" id="some-custom-id">
+                            {{ form_row(form.lastName) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            {{ form_row(form.email) }}
+                        </div>
+                        <div class="col">
+                            {{ form_row(form.phoneNumber) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-5">
+                            {{ form_row(addressForm.country) }}
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-2">
+                            {{ form_row(addressForm.zipCode) }}
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-5">
+                            {{ form_row(addressForm.city) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-5">
+                            {{ form_row(addressForm.street) }}
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-2">
+                            {{ form_row(addressForm.houseNumber) }}
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-5">
+                            {{ form_row(addressForm.comments) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            {{ form_row(form.preferredMethodOfPayment) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            {{ form_row(form.submit) }}
+                        </div>
+                        <div class="col">
+                            <button name="" value="" type="submit" onclick="return confirm('{{ 'Message.deleting.account' | trans }}')" formmethod="post" formaction="{{ path('delete_account') }}" class="btn btn-danger float-center float-md-end">{{ 'Delete.account' | trans}}</button>
+                        </div>
+                    </div>
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

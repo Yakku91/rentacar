@@ -1,0 +1,121 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary rounded ">
+    <div class="container">
+        <div class="col-8 col-md-3 col-lg-2"><a class="navbar-brand justify-content-center me-0"
+                                                href="{{ path('homepage') }}"><img class="logo"
+                                                                                   src="{{ asset('images/logo.png') }}"
+                                                                                   alt="Logo"></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11"
+                aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="col-12 col-md-9 collapse justify-content-md-end navbar-collapse d-lg-flex" id="navbarsExample11">
+            <div class="col-md-8 col-lg-auto my-2 d-block d-md-none d-lg-block">
+                <ul class="navbar-nav px-4 justify-content-center justify-content-lg-end">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ path('homepage') }}">Home</a>
+                    </li>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li class="nav-item">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
+                               aria-expanded="false">Administration</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{{ path('add_car') }}">{{ 'Add.car' | trans }}</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="{{ path('car_order_list') }}">{{ 'Order.list' | trans }}</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="{{ path('user_list') }}">{{ 'User.list' | trans }}</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="{{ path('contact_request') }}">{{ 'Contact.requests' | trans }}</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="{{ path('order_analysis') }}">{{ 'Analysis' | trans }}</a>
+                                </li>
+                            </ul>
+                        </li>
+                        </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link
+                        {% if locale == 'de' %} locale_active {% endif %}"
+                           href="{{ path(app.request.attributes.get('_route'),app.request.attributes.get('_route_params')|merge({'_locale': 'de'})) }}"><span
+                                    class="flag flag-de"> </span>DE</a>
+                    </li>
+                    <li>
+                        <a class="nav-link
+                        {% if locale == 'en' %} locale_active {% endif %}"
+                           href="{{ path(app.request.attributes.get('_route'),app.request.attributes.get('_route_params')|merge({'_locale': 'en'})) }}"><span
+                                    class="flag flag-us"> </span>EN</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-auto">
+                <div class="row my-2">
+                    <ul class="navbar-nav px-4">
+                        {% if is_granted('IS_AUTHENTICATED') %}
+                            <div class="col">
+                                <ul class="navbar-nav justify-content-lg-end">
+
+                                    <li class="nav-item dropdown">
+
+                                        <a class="nav-link dropdown-toggle " data-bs-toggle="dropdown" role="button"
+                                           aria-expanded="false"><img class="profil"
+                                                                      src="{{ asset('images/profil.svg') }}"></a>
+
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item"
+                                                   href="{{ path('user_edit') | trans }}">{{ 'Edit.profile' | trans }}</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                   href="{{ path('change_password') | trans }}">{{ 'Password.change' | trans }}</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                   href="{{ path('rental_agreement') | trans }}">{{ 'Rental.agreements' | trans }}</a>
+                                            </li>
+                                            <hr>
+                                            <li class="dropdown-item"><a href="{{ path('user_logout') | trans }}"
+                                                                         class="btn btn-outline-danger btn-sm"> {{ 'Link.logout' | trans }} </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        {% else %}
+                            <div class="col">
+                                <ul class="navbar-nav justify-content-lg-end">
+                                    <li class="nav-item"><a href="{{ path('login') | trans }}"
+                                                            class="nav-link">{{ 'Link.login' | trans }}</a>
+                                    </li>
+                                    <li class="nav-item"><a href="{{ path('register') | trans }}"
+                                                            class="btn btn-primary">{{ 'Register' | trans }}</a></li>
+                                </ul>
+                            </div>
+
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+<div class="container-fluid d-md-block d-none d-lg-none">
+    <div class="row bg-body-tertiary">
+        <div class="col-12">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{ path('homepage') }}">Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

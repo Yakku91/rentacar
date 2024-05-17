@@ -1,0 +1,19 @@
+{% extends 'emails/email_base.html.twig' %}
+
+{% block body %}
+    {% if order.formOfAddress =='male' %}
+        <p>{{ 'Email.formofaddress.mr'|trans }} {{ order.lastName }}</p>
+    {% elseif order.formOfAddress == 'female' %}
+        <p>{{ 'Email.formofaddress.ms'|trans }} {{ order.lastName }}</p>
+    {% elseif order.formOfAddress == 'diverse' %}
+        <p>{{ 'Email.dear'|trans }} {{ order.firstName }} {{ order.lastName }}</p>
+    {% endif %}
+
+    <p>{{ 'Email.information.text'|trans }}</p>
+    <hr>
+
+{% endblock %}
+
+{% block information %}
+    {% include 'emails/plain_order_information.html.twig' %}
+{% endblock %}

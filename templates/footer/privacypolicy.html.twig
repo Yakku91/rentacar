@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% block searchbar %}{% endblock %}
+
+{% block title %}Mobilmacher - Datenschutzrichtlinien{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2 id="pre"> {{ 'Preamble' | trans }}</h2>
+        <p>{{ 'Preambletext' | trans | raw }}</p>
+        <h2> {{ 'Contents' | trans }}</h2>
+        <ul>
+            <li><a href="#pre">{{ 'Preamble' | trans }}</a></li>
+            <li><a href="#ver">{{ 'Responsible.person.headline' | trans }}</a></li>
+            <li><a href="#ueb">{{ 'Processing.overview.headline' | trans }}</a></li>
+            <li><a href="#sic">{{ 'Security.measures.headline' | trans }}</a></li>
+            <li><a href="#loe">{{ 'Data.deletion' | trans }}</a></li>
+            <li><a href="#coo">{{ 'Cookies.use' | trans }}</a></li>
+            <li><a href="#ber">{{ 'Provision.of.the.online.offer.and.web.hosting' | trans }}</a></li>
+            <li><a href="#aen">{{ 'Modification.and.update.of.the.privacy.policy' | trans }}</a></li>
+            <li><a href="#rec">{{ 'Rights.of.the.data.subjects' | trans }}</a></li>
+        </ul>
+
+        <h2 id="ver">{{ 'Responsible.person.headline' | trans }}</h2>
+        <p>{{ 'Responsible.person.content' | trans | raw }}</p>
+        <h2 id="ueb">{{ 'Processing.overview.headline' | trans }}</h2>
+        <p>{{ 'Processing.overview.content' | trans }}</p>
+        <p>{{ 'Types.of.data.processed' | trans | raw }}</p>
+        <p>{{ 'Relevant.legal.bases.content' | trans | raw }}</p>
+        <h2 id="sic">{{ 'Security.measures.headline' | trans }}</h2>
+        <p>{{ 'Security.measures.content' | trans | raw }}</p>
+        <h2 id="loe">{{ 'Data.deletion' | trans }}</h2>
+        <p>{{ 'Data.deletion.content' | trans | raw }}</p>
+        <h2 id="coo">{{ 'Cookies.use' | trans }}</h2>
+        <p>{{ 'Cookies.use.content' | trans | raw }}</p>
+        <h2 id="ber">{{ 'Provision.of.the.online.offer.and.web.hosting' | trans }}</h2>
+        <p>{{ 'Provision.of.the.online.offer.and.web.hosting.content' | trans | raw }}</p>
+        <h2 id="aen">{{ 'Modification.and.update.of.the.privacy.policy' | trans }}</h2>
+        <p>{{ 'Modification.and.update.of.the.privacy.policy.content' | trans | raw }}</p>
+        <h2 id="rec">{{ 'Rights.of.the.data.subjects' | trans }}</h2>
+        <p>{{ 'Rights.of.the.data.subjects.content' | trans | raw }}</p>
+
+
+        <a href="{{ path('homepage') }}">{{ 'Back.to.homepage' | trans }}</a>
+
+    </div>
+{% endblock %}
+

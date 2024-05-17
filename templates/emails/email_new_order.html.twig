@@ -1,0 +1,13 @@
+{% extends 'emails/email_base.html.twig' %}
+
+{% block header %}
+    <h2>{{ 'Email.new.order.received'|trans }}:</h2>
+{% endblock %}
+
+{% block information %}
+    {% include 'emails/plain_order_information.html.twig' %}
+{% endblock %}
+
+{% block footer %}
+    <p><a href="{{ url('homepage') }}">{{ 'Email.order.overview'|trans }}</a></p>
+{% endblock %}

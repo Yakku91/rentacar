@@ -1,0 +1,13 @@
+{% extends "emails/email_base.html.twig" %}
+{% block body %}
+    {% if user.formOfAddress =='male' %}
+        <p>{{ 'Email.formofaddress.mr'|trans }} {{ user.lastName }}</p>
+    {% elseif user.formOfAddress == 'female' %}
+        <p>{{ 'Email.formofaddress.ms'|trans }} {{ user.lastName }}</p>
+    {% elseif user.formOfAddress == 'diverse' %}
+        <p>{{ 'Email.dear'|trans }} {{ user.firstName }} {{ user.lastName }}</p>
+    {% endif %}
+    <p>
+        {{ 'Email.registration.text' |trans }} <a href="{{ url('login') }}">{{ 'Link.login' |trans }}</a>
+    </p>
+{% endblock %}

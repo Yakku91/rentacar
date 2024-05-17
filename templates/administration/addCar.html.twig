@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+{% block searchbar %}{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {{ form_start(form) }}
+            <div class="my-custom-class-for-errors">
+                {{ form_errors(form) }}
+            </div>
+            <div class="row">
+                <div class="col">
+                    {{ form_row(form.name) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.category) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {{ form_row(form.seats) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.luggage) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.doors) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.gear) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    {{ form_row(form.includedKilometres) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.pricePerKilometre) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    {{ form_row(form.pricePerDay) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.pricePerWeekend) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.pricePerWeek) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    {{ form_row(form.image_file) }}
+                </div>
+            </div>
+
+            {{ form_end(form) }}
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">
+                    <p>{{ message }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'emails/email_base.html.twig' %}
+
+{% block body %}
+    {% if order.formOfAddress =='male' %}
+        <p>{{ 'Email.formofaddress.mr'|trans }} {{ order.lastName }}</p>
+    {% elseif order.formOfAddress == 'female' %}
+        <p>{{ 'Email.formofaddress.ms'|trans }} {{ order.lastName }}</p>
+    {% elseif order.formOfAddress == 'diverse' %}
+        <p>{{ 'Email.dear'|trans }} {{ order.firstName }} {{ order.lastName }}</p>
+    {% endif %}
+
+    <p>{{ 'Email.cancelled.text'|trans |raw }}</p>
+    <hr>
+{% endblock %}
+{% block information %}
+    <h2>{{ 'Email.cancel.information'|trans }}:</h2>
+    <p>{{ 'Email.ordernumber'|trans }}: {{ order.id }}</p>
+    <p>{{ 'Email.vehicle'|trans }}: <a href="{{ url('show_details', {car: order.car.id }) }}">{{ order.car.name }}</a>
+    </p>
+    <p>{{ 'Email.delivery.datetime'|trans }}: {{ order.startDate|date('l d M Y H:i') }}</p>
+    <p>{{ 'Email.return.datetime'| trans }}: {{ order.endDate|date('l d M Y H:i') }}</p>
+    <p>{{ 'Email.total.time'|trans }}: {{ order.getTotalTime()|date('%a Tage') }}</p>
+    <p>{{ 'Km.inclusive'|trans }}: {{ order.car.includedKilometres }}</p>
+    {% if order.deliveryAddress is not null %}
+        <p> {{ 'Email.delivery.location'|trans }}:
+            {{ order.deliveryAddress.street ~ ' ' ~ order.deliveryAddress.houseNumber ~ ', ' ~
+            order.deliveryAddress.zipCode ~ ', ' ~ order.deliveryAddress.city ~ ', ' ~ order.deliveryAddress.country }}
+        </p>
+    {% else %}
+        <p> {{ 'Email.delivery.location'|trans }}:
+            {{ 'Lieferort unbekannt' }}
+        </p>
+    {% endif %}
+{% endblock %}

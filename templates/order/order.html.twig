@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+{% block searchbar %}{% endblock %}
+{% block body %}
+    <div class="container">
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            <p>{{ message }}</p>
+        </div>
+    {% endfor %}
+    <div class="row">
+        {{ form_start(form) }}
+        <div class="my-custom-class-for-errors">
+            {{ form_errors(form) }}
+        </div>
+        <div class="row">
+            <div class="col">
+                {{ form_row(form.formOfAddress) }}
+            </div>
+            <div class="col">
+                {{ form_row(form.firstName) }}
+            </div>
+            <div class="col" id="some-custom-id">
+                {{ form_row(form.lastName) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {{ form_row(form.eMail) }}
+            </div>
+            <div class="col">
+                {{ form_row(form.phoneNumber) }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                {{ form_row(form.methodOfPayment) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {{ form_row(form.startDate) }}
+            </div>
+            <div class="col">
+                {{ form_row(form.endDate) }}
+            </div>
+        </div>
+        <div class="row">
+            <h4 class="text-secondary mb-3 pb-0">{{ 'Form.delivery.location' | trans }}</h4>
+            <div class="col-12 col-md-6 col-lg-5">
+                {{ form_row(addressForm.country) }}
+            </div>
+            <div class="col-12 col-md-6 col-lg-2">
+                {{ form_row(addressForm.zipCode) }}
+            </div>
+            <div class="col-12 col-md-6 col-lg-5">
+                {{ form_row(addressForm.city) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-5">
+                {{ form_row(addressForm.street) }}
+            </div>
+            <div class="col-12 col-md-6 col-lg-2">
+                {{ form_row(addressForm.houseNumber) }}
+            </div>
+            <div class="col-12 col-md-6 col-lg-5">
+                {{ form_row(addressForm.comments) }}
+            </div>
+            <div class="row">
+                <div class="col col-lg-3">
+                    {{ form_row(form.childSeat) }}
+                    {% if (numberOfChildSeats == 0 ) %}
+                        <p>{{ 'No.bookable.child.seat' | trans }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {{ form_row(form.dogCage) }}
+                </div>
+            </div>
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+{% endblock %}

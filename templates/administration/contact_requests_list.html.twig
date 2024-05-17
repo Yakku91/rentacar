@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container" xmlns="http://www.w3.org/1999/html">
+        <table class="table table-striped" id="contacts">
+            <thead>
+            <tr>
+                <th>{{ 'Fullname' | trans }}</th>
+                <th>{{ 'Email' | trans }}</th>
+                <th>{{ 'Phonenumber' | trans }}</th>
+                <th>{{ 'Date' | trans }}</th>
+                <th data-sortable="false">{{ 'Contact.requests'| trans }}</th>
+            </thead>
+            <tbody>
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.firstName }} {{ contact.lastname }}</td>
+                    <td>{{ contact.eMail }} </td>
+                    <td>{{ contact.phoneNumber }} </td>
+                    <td data-sort="{{ contact.date | date('Y-m-d') }} ">{{ contact.date | date("d.m.Y") }} </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#{{ contact.id }}" >{{ 'Message' |trans }}
+                        </button>
+                        <div class="modal fade" id="{{ contact.id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="title {{ contact.id }}">{{ 'Message' | trans }}</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>{{ contact.message }}</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                                            {{ 'Close' | trans }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% if app.request.locale == 'de' %}
+        <script>
+            $(document).ready(function () {
+                $('#contacts').DataTable(
+                    {
+                        "lengthMenu": [5, 10, 20, 50, 100],
+                        order: [[
+                            3, 'desc'
+                        ]],
+                        language: {
+                            url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/de-DE.json',
+                        },
+                        "searching": false,
+                        "info": false,
+                    }
+                );
+            });
+        </script>
+    {% else %}
+        <script>
+            $(document).ready(function () {
+                $('#contacts').DataTable(
+                    {
+                        "lengthMenu": [5, 10, 20, 50, 100],
+                        order: [[
+                            3, 'desc'
+                        ]],
+                        "searching": false,
+                        "info": false,
+                    }
+                );
+            });
+        </script>
+    {% endif %}
+{% endblock %}

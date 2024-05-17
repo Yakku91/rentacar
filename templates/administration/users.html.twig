@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row bg-body-tertiary pt-3">
+            {{ form_start(filter_form) }}
+            <div class="col">
+                <form action="{{ path('user_list') }}" method="post">
+                    <div class="form-check form-check-inline">
+                        {{ form_row(filter_form.admin) }}
+                    </div>
+                    <div class="form-check form-check-inline">
+                        {{ form_row(filter_form.user) }}
+                    </div>
+                    <div class="form-check form-check-inline">
+                        {{ form_row(filter_form.submit) }}
+                    </div>
+                </form>
+                {{ form_end(filter_form) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col pt-3">
+                <table class="table table-striped" id="userTable">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>{{ 'Fullname' | trans }}</th>
+                        <th>{{ 'Email' | trans }}</th>
+                        <th>{{ 'Phonenumber' | trans }}</th>
+                        <th>{{ 'Role' | trans }}</th>
+                        <th data-sortable="false">{{ 'Details' | trans }}</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.id }}</td>
+                            <td>{{ user.getFirstname }} {{ user.getLastname }}</td>
+                            <td>{{ user.getEmail }} </td>
+                            <td>{{ user.getPhonenumber }} </td>
+                            <td>
+                                {% for role in user.getRoles %}
+                                    {{ role | trans }},
+                                {% endfor %}
+                            </td>
+                            <td>
+                                <a href="{{ path('edit_user', {id: user.id }) }}"
+                                   class="btn btn-primary btn-sm">Details</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% if app.request.locale == 'de' %}
+        <script>
+            $(document).ready(function () {
+                $('#userTable').DataTable(
+                    {
+                        "lengthMenu": [5, 10, 20, 50, 100],
+                        language: {
+                            url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/de-DE.json',
+                        },
+                        "searching": false,
+                        "info": false,
+                    }
+                );
+            });
+        </script>
+    {% else %}
+        <script>
+            $(document).ready(function () {
+                $('#userTable').DataTable(
+                    {
+                        "lengthMenu": [5, 10, 20, 50, 100],
+                        "searching": false,
+                        "info": false,
+                    }
+                );
+            });
+        </script>
+    {% endif %}
+{% endblock %}

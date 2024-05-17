@@ -1,0 +1,11 @@
+parameters:
+  level: 5
+  paths:
+    - src
+  bootstrapFiles:
+    - phpstan.bootstrap.php
+  ignoreErrors:
+  reportUnmatchedIgnoredErrors: false
+  checkMissingIterableValueType: false
+  excludes_analyse:
+    - '*/Tests/*'

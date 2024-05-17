@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row bg-body-tertiary pt-3">
+            <div class="col">
+                {{ form_start(filter_form) }}
+                <form action="{{ path('car_order_list') }}" method="post">
+                    <div class="form-check form-check-inline">
+                        {{ form_row(filter_form.pending) }}
+                    </div>
+                    <div class="form-check form-check-inline">
+                        {{ form_row(filter_form.allowed) }}
+                    </div>
+                    <div class="form-check form-check-inline">
+                        {{ form_row(filter_form.denied) }}
+                    </div>
+                    <div class="form-check form-check-inline">
+                        {{ form_row(filter_form.submit, {'attr': {'class': 'btn btn-primary btn-sm'}}) }}
+                    </div>
+                </form>
+                {{ form_end(filter_form) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col pt-3">
+                <table class="table table-striped" id="orderTable">
+                    <thead>
+                    <tr>
+                        <th>{{ 'Fullname' | trans }}</th>
+                        <th>{{ 'Email' | trans }}</th>
+                        <th>{{ 'Starttime' | trans }}</th>
+                        <th>{{ 'Endtime' | trans }}</th>
+                        <th>{{ 'Car' | trans }}</th>
+                        <th>{{ 'Extras' | trans }}</th>
+                        <th style="min-width: 130px">{{ 'Last.edit' | trans }}</th>
+                        <th>{{ 'Status' | trans }}</th>
+                        <th data-sortable="false">{{ 'Allow' | trans }}</th>
+                        <th data-sortable="false">{{ 'Deny' | trans }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for order in orders %}
+                        <tr>
+                            <td>{{ order.getFirstname }} {{ order.getLastname }}</td>
+                            <td>{{ order.getEmail }} </td>
+                            <td data-sort="{{ order.getStartdate| date('Y-m-dTH:i') }}">{{ order.getStartdate | date("d/m/Y H:i") }} </td>
+                            <td data-sort="{{ order.getEnddate| date('Y-m-dTH:i') }}">{{ order.getEnddate | date("d/m/Y H:i") }} </td>
+                            <td>{{ order.getCar().getName }} </td>
+                            <td>{% if order.getChildSeat > 0 %}{{ order.getChildSeat }}X {{ 'Form.car.seat' | trans }}{% endif %}{% if order.getChildSeat > 0 and order.hasDogCage %}, {% endif %}{% if order.hasDogCage %}{{ 'Form.dog.cage'| trans }} {% endif %}</td>
+                            <td data-sort="{{ order.getLastEdit()| date('Y-m-dTH:i') }}">{{ order.getLastEdit() | date("d/m/Y H:i") }} </td>
+                            <td>{{ order.getStatus() | trans }} </td>
+                            <td>
+                                <form method="post" action="{{ path('allow_rent_request') }}">
+                                    <button type="submit"
+                                            name="id" {% if order.getStatus == 'Allowed' %} disabled {% endif %}
+                                            onclick="return confirm('{{ 'Message.allow.rent.request' | trans }}')"
+                                            value="{{ order.id }}"
+                                            class="btn btn-primary btn-sm">{{ 'Allow' | trans }}</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form method="post" action="{{ path('deny_rent_request') }}">
+                                    <button type="submit"
+                                            name="id" {% if order.getStatus == 'Denied' %} disabled {% endif %}
+                                            onclick="return confirm('{{ 'Message.deny.rent.request' | trans }}')"
+                                            value="{{ order.id }}" class="btn btn-danger btn-sm">{{ 'Deny' | trans }}</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% if app.request.locale == 'de' %}
+        <script>
+
+            $(document).ready(function () {
+                $('#orderTable').DataTable(
+                    {
+                        "lengthMenu": [5, 10, 20, 50, 100],
+                        order: [[
+                            2, 'asc'
+                        ]],
+                        language: {
+                            url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/de-DE.json',
+                        },
+                        "searching": false,
+                        "info": false,
+                    }
+                );
+            });
+        </script>
+    {% else %}
+        <script>
+            $(document).ready(function () {
+                $('#orderTable').DataTable(
+                    {
+                        "lengthMenu": [5, 10, 20, 50, 100],
+                        order: [[
+                            2, 'asc'
+                        ]],
+                        "searching": false,
+                        "info": false,
+                    }
+                );
+            });
+        </script>
+    {% endif %}
+{% endblock %}

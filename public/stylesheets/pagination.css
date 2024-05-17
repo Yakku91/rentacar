@@ -1,0 +1,17 @@
+.page-link {
+    color: #39B54A;
+    font-weight: bold;
+}
+
+.page-link:hover {
+    color: navajowhite;
+}
+
+.active {
+    --bs-pagination-active-bg: #39B54A;
+    --bs-pagination-active-border-color: #39B54A;
+}
+
+.locale_active {
+    color: #39B54A;
+}

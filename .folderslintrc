@@ -1,0 +1,31 @@
+{
+  "root": ".",
+  "rules": [
+    ".ddev/*",
+    "bin/*",
+    "config/packages/*",
+    "config/packages/dev/*",
+    "config/packages/prod/*",
+    "config/packages/test/*",
+    "config/routes/*",
+    "migrations/*",
+    "public/**",
+    "src/Command/*",
+    "src/Controller/*",
+    "src/DataFixtures/*",
+    "src/Entity/*",
+    "src/Enum/*",
+    "src/EventListener/*",
+    "src/EventSubscriber/*",
+    "src/Form/*",
+    "src/Model/*",
+    "src/Repository/*",
+    "src/Security/*",
+    "src/Service/*",
+    "src/Traits/*",
+    "src/Twig/*",
+    "templates/**",
+    "translations/*",
+    "vendor/**"
+  ]
+}

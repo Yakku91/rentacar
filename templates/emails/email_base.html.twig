@@ -1,0 +1,31 @@
+{% apply inline_css(source('@styles/email.css')) %}
+    {% block header %}
+        <div class="header-container">
+            <h1 class="header-title">{{ 'Email.welcome'|trans }} Mobilmachern!</h1>
+            <img src="{{ email.image('@images/logo.png') }}" alt="Logo" width="200">
+        </div>
+    {% endblock %}
+
+
+    {% block body %}
+    {% endblock %}
+
+    {% block information %}
+        {# Hier Informationen integrieren:{{ include 'email/plain_order_information.html.twig' }} #}
+    {% endblock %}
+
+
+    {% block footer %}
+        <hr>
+        <div class="signature">
+            <p>{{ 'Email.greetings'|trans }},</p>
+            <br>
+            <p>Die Mobilmacher</p>
+            <br>
+            <p><a href="{{ url('homepage') }}">www.mobilitaetsmacher.bysaeth.de</a></p>
+            <p><a href="{{ url('imprinttext') }}">{{ 'Imprint'|trans }}</a></p>
+            <p><a href="{{ url('privacy') }}">{{ 'Privacy'|trans }}</a></p>
+            <p><a href="{{ url('contact') }}">{{ 'Footer.contact'|trans }}</a></p>
+        </div>
+    {% endblock %}
+{% endapply %}

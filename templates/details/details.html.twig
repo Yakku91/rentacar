@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col" class="col-8">{{ 'Vehicle.details' | trans }}</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{ 'Category' | trans }}</td>
+                        <td> {{ car.getCategory() | trans }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'Luggage' | trans }}</td>
+                        <td>{{ car.getLuggage() }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'Doors' | trans }}</td>
+                        <td>{{ car.getDoors() }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'Gear' | trans }}</td>
+                        <td>{{ car.getGear() | trans }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'Seats' |trans }}</td>
+                        <td>{{ car.getSeats() }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col" class="col-8">{{ 'Prices' | trans }}</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{ 'Km.inclusive' | trans }}</td>
+                        <td>{{ car.getIncludedKilometres() }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'Price.per.day' | trans }}</td>
+                        <td>{{ car.getPricePerDay()|format_currency('EUR', locale='de') }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'Price.per.weekend'| trans }}</td>
+                        <td>{{ car.getPricePerWeekend()|format_currency('EUR', locale='de') }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'Price.per.week' | trans }}</td>
+                        <td>{{ car.getPricePerWeek()|format_currency('EUR', locale='de') }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'Additional.km' | trans }}</td>
+                        <td>{{ car.getPricePerKilometre()|format_currency('EUR', locale='de') }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12 col-md-6 my-auto">
+                {% if (car.thumbnailURL is empty) %}
+                    <img src="/images/keinBild.png" alt="">
+                {% else %}
+                    <img src="{{ asset(car.thumbnailURL) }}" alt="{{ car.name }}">
+                {% endif %}
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <a href="{{ path('car_order', {car: car.id}) }}"
+                   class="btn btn-primary mx-auto"> {{ 'Rent.now' | trans }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

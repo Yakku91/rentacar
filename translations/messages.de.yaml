@@ -1,0 +1,340 @@
+Vehicles: 'Fahrzeuge'
+Name: 'Name'
+Category: 'Kategorie'
+Price.per.day: 'Tagespreis'
+Price.per.weekend: 'Wochenendpreis'
+Price.per.week: 'Wochenpreis'
+Additional.km: 'Zusätzliche Kilometer'
+Details: 'Details'
+Btn.show.details: 'Details anzeigen'
+Home: 'Home'
+Fullname: 'Name'
+Imprint: 'Impressum'
+Privacy: 'Datenschutzerklärung'
+Contact: 'Kontakt <br> <h6> Telefonisch erreichen sie uns unter <b>0421/231230</b></h6><br>'
+Edit.profile: 'Daten ändern'
+Link.login: 'Anmelden'
+Link.register: 'Registrierung'
+Link.logout: 'Abmelden'
+Form.select: 'Anrede'
+Form.mr.: 'Herr'
+Form.mrs.: 'Frau'
+Form.diverse: 'Diverse'
+Form.firstname: 'Vorname *'
+Form.lastname: 'Nachname *'
+Form.email: 'E-Mail *'
+Form.address: 'Adresse *'
+Form.phonenumber: 'Telefonnummer *'
+Form.payment.method: 'Bevorzugte Zahlungsmethode'
+Form.cash: 'Bar'
+Cash: 'Bar'
+Message: 'Nachricht'
+Close: 'Schließen'
+Form.girocard: 'Girocard'
+Form.password: 'Passwort *'
+Form.repeat.password: 'Passwort wiederholen *'
+Form.conditions: 'Ich akzeptiere die allgemeinen Geschäftsbedingungen *'
+Form.btn.register: 'Jetzt registrieren'
+Form.addCar.name: 'Name *'
+Form.addCar.category: 'Kategorie *'
+Form.addCar.seats: 'Sitze *'
+Form.addCar.luggage: 'Gepäck *'
+Form.addCar.doors: 'Türen *'
+Form.addCar.gear: 'Schaltung *'
+Form.addCar.includedKilometers: 'Km inklusive *'
+Form.addCar.pricePerDay: 'Preis pro Tag *'
+Form.addCar.pricePerWeek: 'Preis pro Woche *'
+Form.addCar.pricePerWeekend: 'Preis pro Wochenende *'
+Form.addCar.pricePerExtraKm: 'Kilometerpauschale *'
+Form.addCar.image_file: 'Bild hinzufügen'
+Form.addCar.flashmessage: 'Fahrzeug erfolgreich hinzugefügt'
+Form.resetPassword: "Passwort vergessen"
+Form.resetPassword.info: "Bitte geben Sie Ihre E-Mail-Adresse an. Sie erhalten einen Link, um Ihr Passwort zurückzusetzen"
+Form.resetPassword.button: "E-Mail versenden"
+Form.resetPassword.resetButton: "Passwort zurücksetzen"
+Form.resetPassword.title: "E-Mail gesendet"
+Form.password.wrongPassword: "Bitte das alte Passwort korrekt eingeben"
+Form.search.timePeriod: "Zeitraum"
+Add.car: 'Fahrzeug anlegen'
+Is.dog.cage.compatible: 'Hundebox kann mitgebucht werden'
+Email: 'E-Mail'
+Password: 'Passwort'
+Register: 'Registrieren'
+Limousine: 'Limousine'
+Kombi: 'Kombi'
+Luggage: 'Gepäckstück'
+Geländewagen: 'Geländewagen'
+Minibus: 'Minibus'
+Doors: 'Türen'
+Gear: 'Schaltung'
+Automatik: 'Automatik'
+Manuell: 'Manuell'
+Seats: 'Sitzplätze'
+Vehicle.details: 'Fahrzeugdaten'
+Prices: 'Preisliste'
+Km.inclusive: 'Km Inklusive'
+Rent.now: 'Jetzt mieten'
+Firstname: 'Vorname'
+Lastname: 'Nachname'
+Address: 'Adresse'
+Phonenumber: 'Telefonnummer'
+Old.password: 'Altes Passwort'
+New.password: 'Neues Passwort'
+Delete.account: 'Konto löschen'
+New.password.repeat: 'Wiederhole dein neues Passwort'
+Save: 'Speichern'
+Form.delivery.datetime: 'Lieferzeitpunkt *'
+Form.return.datetime: 'Abgabezeitpunkt *'
+Form.delivery.location: 'Lieferort *'
+/en/login: '/de/anmelden'
+/en/edit-profile: '/de/aktualisieren'
+/en/create-account: '/de/registrierung'
+Starttime: 'Startzeit'
+Endtime: 'Endzeit'
+Date: 'Datum'
+Car: 'Auto'
+Access.denied: 'Zugriff verweigert'
+Access.denied.message: 'Diese Seite ist nur für berechtigte Administratoren erreichbar!'
+Back.to.homepage: 'Zurück zur Startseite'
+Car.list: 'Verfügbare Fahrzeuge'
+Btn.search: 'suchen'
+Car.not.found: 'Kein passendes Auto gefunden. Bitte passen Sie Ihre Suche an.'
+Order.list: 'Mietanfragen'
+Form.car.seat: 'Kindersitz'
+Form.dog.cage: 'Hundebox'
+ContactInformation: 'Kontaktinformationen'
+Email.welcome: 'Herzlich Willkommen bei den'
+Email.greetings: 'Mit freundlichen Grüßen'
+Email.new.order.received: 'Neue Bestellung eingegangen'
+Email.order.overview: 'Übersicht Bestellungen hier klicken'
+Email.not.ordered: 'nicht gebucht'
+Email.one.dogbox: 'eine Hundebox gebucht'
+Email.one.carseat: 'ein Kindersitz gebucht'
+Email.orderinformation: 'Bestellinformationen'
+Email.cancel.information: 'Stornierung'
+Email.ordernumber: 'Bestellungsnummer'
+Email.vehicle: 'Fahrzeug'
+Email.delivery.datetime: 'Lieferzeitpunkt'
+Email.return.datetime: 'Rückgabezeitpunkt'
+Email.total.time: 'Zeit total'
+Email.delivery.location: 'Lieferort'
+Email.formofaddress.mr: 'Sehr geehrter Herr'
+Email.formofaddress.ms: 'Sehr geehrte Frau'
+Email.dear: 'Sehr geehrte/r'
+Email.information.text: '   herzlichen Dank für Ihre Bestellung bei den Mobilitätsmacher:innen! Wir freuen uns sehr, dass Sie sich für unsere
+        E-Autos entschieden haben und möchten Sie willkommen heißen.
+    Damit Sie Ihr E-Auto so schnell wie möglich nutzen können, möchten wir Sie daran erinnern, dass Sie bei der
+        Übergabe
+        des Fahrzeugs einen gültigen Führerschein und Personalausweis bereithalten sollten.
+    Unser Team wird sich in Kürze bei Ihnen melden, um die Details Ihrer Bestellung zu besprechen und den
+        Übergabetermin
+        zu vereinbaren. Gerne beantworten wir auch alle Fragen, die Sie haben könnten, und stehen Ihnen bei Bedarf mit
+        Rat
+        und Tat zur Seite.
+    Wir freuen uns darauf, Sie als Kunden bei den Mobilmacher:innen begrüßen zu dürfen.'
+Email.passwordReset.text: "um Ihr Passwort zurückzusetzen klicken Sie bitte auf folgenden Link. Dieser läuft ab in"
+Email.contact.text: 'Vielen Dank für ihre Kontaktaufnahme.<br>Unser Team wird sich in Kürze bei ihnen melden um ihr Anliegen zu besprechen. <br>Wir freuen uns darauf, Sie als Kunden bei den Mobilmacher:innen begrüßen zu dürfen.'
+Email.registration.text: '     herzlichen Dank für Ihre Registrierung bei den Mobilitätsmacher:innen! Wir freuen uns sehr, dass Sie sich für unsere
+        E-Autos entschieden haben und möchten Sie willkommen heißen. Hier geht es zum '
+Email.order.confirmed: "Bestellung bestätigt!"
+Email.order.denied: "Bestellung abgelehnt!"
+Order.success: 'Ihre Buchung war erfolgreich!'
+Register.success: "Sie haben sich erfolgreich registriert!"
+Logout.success: "Auf Wiedersehen!"
+Edit.success: "Daten erfolgreich geändert"
+Contact.success: 'Vielen Dank für ihre Kontaktaufnahme. Wir werden uns schnellstmöglich um ihr Anliegen kümmern.'
+Contact.requests: 'Kontaktanfragen'
+Extras: 'Extras'
+Allow: 'Zustimmen'
+Deny: 'Ablehnen'
+Allowed: 'Zugestimmt'
+Denied: 'Abgelehnt'
+Pending: 'Ausstehend'
+Status: 'Status'
+Message.allow.rent.request: 'Möchten Sie dieser Mietanfrage zustimmen?'
+Message.deny.rent.request: 'Möchten Sie diese Mietanfrage ablehnen?'
+Last.edit: 'Letzte Änderung'
+Filter: 'Filtern'
+Orders: 'Mietliste'
+User.list: 'Benutzerliste'
+Role: 'Rolle'
+ROLE_ADMIN: 'Administrator'
+ROLE_USER: 'Benutzer'
+User: 'Benutzer'
+Edit.user: 'Benutzerdaten ändern'
+ResetPassword.infotext: 'Wenn es ein Konto gibt, das mit Ihrer E-Mail-Adresse übereinstimmt, wurde soeben eine E-Mail versandt, die einen Link enthält, mit dem Sie Ihr Passwort zurücksetzen können. 
+Dieser Link läuft ab in '
+ResetPassword.infotext2: 'Wenn Sie keine E-Mail erhalten, überprüfen Sie bitte Ihren Spam-Ordner oder versuchen Sie es'
+ResetPassword.link: "erneut"
+Flash.resetPassword.success: "Das Passwort wurde erfolgreich geändert"
+Flash.wrongDates: "Das Startdatum muss vor dem Enddatum liegen."
+Serviceprovider: 'Diensteanbieter für das Angebot unter mobilmacher ist die:'
+Contact.provider: 'Anschrift : mobilmacher, Konsul-Smidt-Str. 24, 28217 Bremen'
+Emailaddress.provider: 'E-Mail : mobilmacher@bysaeth.de '
+Managing: 'Geschäftsführerin : Gabi Rosenbaum'
+Registrycourt: 'Registergericht : Amtsgericht Bremen'
+Commercialregister: 'Handelsregister : HRB 211 91'
+USt-ID-Nr.: 'USt-ID-Nr. : DE226144875'
+Imprinttext:
+  'Der Anbieter bemüht sich, dass die auf ihrer Website enthaltenen Informationen und Daten zutreffend sind. Eine 
+    Haftung oder Garantie für die Aktualität, Richtigkeit und Vollständigkeit der zur Verfügung gestellten Informationen
+    und Daten ist jedoch ausgeschlossen. Dies gilt ebenso für alle anderen Websites, auf die mittels eines Hyperlinks
+    verwiesen wird. Der Anbieter ist für den Inhalt solcher Websites, die mittels einer solchen Verbindung erreicht
+    werden, ebenfalls nicht verantwortlich. Der Anbieter behält sich vor, ohne Ankündigung Änderungen oder Ergänzungen
+    der bereitgestellten Informationen oder Daten vorzunehmen. Der Inhalt der Website ist urheberrechtlich geschützt.
+    Die Vervielfältigung von Informationen oder Daten, insbesondere die Verwendung von Texten, Textteilen oder
+    Bildmaterial bedarf der vorherigen Zustimmung des Anbieters. Davon ausgenommen sind die im Kapitel "Presse" für die
+    Weiterverbreitung ausdrücklich angebotenen Informationen. Sämtliche Informationen oder Daten, ihre Nutzung und die
+    Anmeldung zur Website sowie sämtliches mit der Website zusammenhängendes Tun, Dulden oder Unterlassen unterliegen
+    ausschließlich deutschem Recht. Erfüllungsort und ausschließlicher Gerichtsstand ist des Anbieters.'
+Message.deleting.account: 'Möchten Sie Ihr Konto löschen?'
+Error.deleting.account: 'Sie können Ihr Konto erst nach dem Ablauf ihres aktuellen Mietvertrags löschen!'
+Success.deleting.account: 'Dein Konto und deine Personenbezogenedaten wurden gelöscht. Ich hoffe, wir sehen dich bald wieder.'
+Privacy.policy: 'Datenschutzerklärung'
+Preamble: 'Präambel'
+Preambletext: 'Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer 
+personenbezogenen Daten (nachfolgend auch kurz als "Daten“ bezeichnet) wir zu welchen Zwecken und in welchem Umfang
+verarbeiten. Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten,
+sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten, in mobilen Applikationen
+sowie innerhalb externer Onlinepräsenzen, wie z.B. unserer Social-Media-Profile (nachfolgend zusammenfassend bezeichnet
+als "Onlineangebot“).
+<br>
+Die verwendeten Begriffe sind nicht geschlechtsspezifisch.
+<br>
+<br>
+Stand: 21. Mai 2023'
+Contents: 'Inhaltsübersicht'
+Responsible.person.headline: 'Verantwortlicher'
+Responsible.person.content: 'mobilmacher <br>
+Konsul-Smidt-Str. 24 <br>
+28217 Bremen <br>
+<br>
+Vertretungsberechtigte Personen: <br>
+<br>
+Gabi Rosenbaum <br>
+<br>
+E-Mail-Adresse: mobilmacher@bysaeth.de'
+Processing.overview.headline: 'Übersicht der Verarbeitungen'
+Processing.overview.content: 'Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen und verweist auf die betroffenen Personen.'
+Types.of.data.processed: '<h5>Arten der verarbeiteten Daten</h5>
+<ul>
+<li>Nutzungsdaten.</li>
+<li>Meta-, Kommunikations- und Verfahrensdaten.</li></ul>
+
+<h5>Kategorien betroffener Personen</h5>
+<ul>
+<li>Nutzer.
+</ul>
+<h5>Zwecke der Verarbeitung</h5>
+<ul>
+<li>Sicherheitsmaßnahmen.</li>
+<li>Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.</li>
+<li>Informationstechnische Infrastruktur.</li></ul>
+
+<h5>Maßgebliche Rechtsgrundlagen</h5>'
+Relevant.legal.bases.content: 'Im Folgenden erhalten Sie eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene Daten verarbeiten. Bitte nehmen Sie zur Kenntnis, dass neben den Regelungen der DSGVO nationale Datenschutzvorgaben in Ihrem bzw. unserem Wohn- oder Sitzland gelten können. Sollten ferner im Einzelfall speziellere Rechtsgrundlagen maßgeblich sein, teilen wir Ihnen diese in der Datenschutzerklärung mit.Im Folgenden erhalten Sie eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene Daten verarbeiten. Bitte nehmen Sie zur Kenntnis, dass neben den Regelungen der DSGVO nationale Datenschutzvorgaben in Ihrem bzw. unserem Wohn- oder Sitzland gelten können. Sollten ferner im Einzelfall speziellere Rechtsgrundlagen maßgeblich sein, teilen wir Ihnen diese in der Datenschutzerklärung mit.
+<ul>
+<li>Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO)</li>
+ - Die betroffene Person hat ihre Einwilligung in die Verarbeitung der sie betreffenden personenbezogenen Daten für einen spezifischen Zweck oder mehrere bestimmte Zwecke gegeben.
+<li>Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO)</li>
+ - Die Verarbeitung ist zur Wahrung der berechtigten Interessen des Verantwortlichen oder eines Dritten erforderlich, sofern nicht die Interessen oder Grundrechte und Grundfreiheiten der betroffenen Person, die den Schutz personenbezogener Daten erfordern, überwiegen.
+</ul>
+<br>
+Zusätzlich zu den Datenschutzregelungen der DSGVO gelten nationale Regelungen zum Datenschutz in Deutschland. Hierzu gehört insbesondere das Gesetz zum Schutz vor Missbrauch personenbezogener Daten bei der Datenverarbeitung (Bundesdatenschutzgesetz – BDSG). Das BDSG enthält insbesondere Spezialregelungen zum Recht auf Auskunft, zum Recht auf Löschung, zum Widerspruchsrecht, zur Verarbeitung besonderer Kategorien personenbezogener Daten, zur Verarbeitung für andere Zwecke und zur Übermittlung sowie automatisierten Entscheidungsfindung im Einzelfall einschließlich Profiling. Des Weiteren regelt es die Datenverarbeitung für Zwecke des Beschäftigungsverhältnisses (§ 26 BDSG), insbesondere im Hinblick auf die Begründung, Durchführung oder Beendigung von Beschäftigungsverhältnissen sowie die Einwilligung von Beschäftigten. Ferner können Landesdatenschutzgesetze der einzelnen Bundesländer zur Anwendung gelangen.'
+Security.measures.headline: 'Sicherheitsmaßnahmen'
+Security.measures.content: 'Wir treffen nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeiten und des Ausmaßes der Bedrohung der Rechte und Freiheiten natürlicher Personen geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.
+
+Zu den Maßnahmen gehören insbesondere die Sicherung der Vertraulichkeit, Integrität und Verfügbarkeit von Daten durch Kontrolle des physischen und elektronischen Zugangs zu den Daten als auch des sie betreffenden Zugriffs, der Eingabe, der Weitergabe, der Sicherung der Verfügbarkeit und ihrer Trennung. Des Weiteren haben wir Verfahren eingerichtet, die eine Wahrnehmung von Betroffenenrechten, die Löschung von Daten und Reaktionen auf die Gefährdung der Daten gewährleisten. Ferner berücksichtigen wir den Schutz personenbezogener Daten bereits bei der Entwicklung bzw. Auswahl von Hardware, Software sowie Verfahren entsprechend dem Prinzip des Datenschutzes, durch Technikgestaltung und durch datenschutzfreundliche Voreinstellungen.'
+Data.deletion: 'Löschung von Daten'
+Data.deletion.content: 'Die von uns verarbeiteten Daten werden nach Maßgabe der gesetzlichen Vorgaben gelöscht, sobald deren zur Verarbeitung erlaubten Einwilligungen widerrufen werden oder sonstige Erlaubnisse entfallen (z.B. wenn der Zweck der Verarbeitung dieser Daten entfallen ist oder sie für den Zweck nicht erforderlich sind). Sofern die Daten nicht gelöscht werden, weil sie für andere und gesetzlich zulässige Zwecke erforderlich sind, wird deren Verarbeitung auf diese Zwecke beschränkt. D.h., die Daten werden gesperrt und nicht für andere Zwecke verarbeitet. Das gilt z.B. für Daten, die aus handels- oder steuerrechtlichen Gründen aufbewahrt werden müssen oder deren Speicherung zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen natürlichen oder juristischen Person erforderlich ist.
+
+Unsere Datenschutzhinweise können ferner weitere Angaben zu der Aufbewahrung und Löschung von Daten beinhalten, die für die jeweiligen Verarbeitungen vorrangig gelten.'
+Cookies.use: 'Einsatz von Cookies'
+Cookies.use.content: 'Cookies sind kleine Textdateien, bzw. sonstige Speichervermerke, die Informationen auf Endgeräten speichern und Informationen aus den Endgeräten auslesen. Z.B. um den Login-Status in einem Nutzerkonto, einen Warenkorbinhalt in einem E-Shop, die aufgerufenen Inhalte oder verwendete Funktionen eines Onlineangebotes speichern. Cookies können ferner zu unterschiedlichen Zwecken eingesetzt werden, z.B. zu Zwecken der Funktionsfähigkeit, Sicherheit und Komfort von Onlineangeboten sowie der Erstellung von Analysen der Besucherströme.
+<br>
+<b>Hinweise zur Einwilligung:</b> Wir setzen Cookies im Einklang mit den gesetzlichen Vorschriften ein. Daher holen wir von den Nutzern eine vorhergehende Einwilligung ein, außer wenn diese gesetzlich nicht gefordert ist. Eine Einwilligung ist insbesondere nicht notwendig, wenn das Speichern und das Auslesen der Informationen, also auch von Cookies, unbedingt erforderlich sind, um dem den Nutzern einen von ihnen ausdrücklich gewünschten Telemediendienst (also unser Onlineangebot) zur Verfügung zu stellen. Zu den unbedingt erforderlichen Cookies gehören in der Regel Cookies mit Funktionen, die der Anzeige und Lauffähigkeit des Onlineangebotes , dem Lastausgleich, der Sicherheit, der Speicherung der Präferenzen und Auswahlmöglichkeiten der Nutzer oder ähnlichen mit der Bereitstellung der Haupt- und Nebenfunktionen des von den Nutzern angeforderten Onlineangebotes zusammenhängenden Zwecken dienen. Die widerrufliche Einwilligung wird gegenüber den Nutzern deutlich kommuniziert und enthält die Informationen zu der jeweiligen Cookie-Nutzung.
+<br>
+<b>Hinweise zu datenschutzrechtlichen Rechtsgrundlagen:</b> Auf welcher datenschutzrechtlichen Rechtsgrundlage wir die personenbezogenen Daten der Nutzer mit Hilfe von Cookies verarbeiten, hängt davon ab, ob wir Nutzer um eine Einwilligung bitten. Falls die Nutzer einwilligen, ist die Rechtsgrundlage der Verarbeitung Ihrer Daten die erklärte Einwilligung. Andernfalls werden die mithilfe von Cookies verarbeiteten Daten auf Grundlage unserer berechtigten Interessen (z.B. an einem betriebswirtschaftlichen Betrieb unseres Onlineangebotes und Verbesserung seiner Nutzbarkeit) verarbeitet oder, wenn dies im Rahmen der Erfüllung unserer vertraglichen Pflichten erfolgt, wenn der Einsatz von Cookies erforderlich ist, um unsere vertraglichen Verpflichtungen zu erfüllen. Zu welchen Zwecken die Cookies von uns verarbeitet werden, darüber klären wir im Laufe dieser Datenschutzerklärung oder im Rahmen von unseren Einwilligungs- und Verarbeitungsprozessen auf.
+<br>
+<b>Speicherdauer:</b> Im Hinblick auf die Speicherdauer werden die folgenden Arten von Cookies unterschieden:
+<ul>
+<li><b>Temporäre Cookies (auch: Session- oder Sitzungs-Cookies):</b>
+Temporäre Cookies werden spätestens gelöscht, nachdem ein Nutzer ein Online-Angebot verlassen und sein Endgerät (z.B. Browser oder mobile Applikation) geschlossen hat.</li>
+<li><b>Permanente Cookies:</b>
+Permanente Cookies bleiben auch nach dem Schließen des Endgerätes gespeichert. So können beispielsweise der Login-Status gespeichert oder bevorzugte Inhalte direkt angezeigt werden, wenn der Nutzer eine Website erneut besucht. Ebenso können die mit Hilfe von Cookies erhobenen Daten der Nutzer zur Reichweitenmessung verwendet werden. Sofern wir Nutzern keine expliziten Angaben zur Art und Speicherdauer von Cookies mitteilen (z. B. im Rahmen der Einholung der Einwilligung), sollten Nutzer davon ausgehen, dass Cookies permanent sind und die Speicherdauer bis zu zwei Jahre betragen kann.</li>
+</ul>
+<br>
+<b>Allgemeine Hinweise zum Widerruf und Widerspruch (Opt-Out):</b> Nutzer können die von ihnen abgegebenen Einwilligungen jederzeit widerrufen und zudem einen Widerspruch gegen die Verarbeitung entsprechend den gesetzlichen Vorgaben im Art. 21 DSGVO einlegen. Nutzer können ihren Widerspruch auch über die Einstellungen ihres Browsers erklären, z.B. durch Deaktivierung der Verwendung von Cookies (wobei dadurch auch die Funktionalität unserer Online-Dienste eingeschränkt sein kann). Ein Widerspruch gegen die Verwendung von Cookies zu Online-Marketing-Zwecken kann auch über die Websites https://optout.aboutads.info und https://www.youronlinechoices.com/ erklärt werden.
+<ul>
+<br>
+<li><b>Rechtsgrundlagen :</b>
+Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO); Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO).
+</ul>
+<b>Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:</b>
+<ul>
+<br>
+<li><b>Verarbeitung von Cookie-Daten auf Grundlage einer Einwilligung:</b>
+ Wir setzen ein Verfahren zum Cookie-Einwilligungs-Management ein, in dessen Rahmen die Einwilligungen der Nutzer in den Einsatz von Cookies, bzw. der im Rahmen des Cookie-Einwilligungs-Management-Verfahrens genannten Verarbeitungen und Anbieter eingeholt sowie von den Nutzern verwaltet und widerrufen werden können. Hierbei wird die Einwilligungserklärung gespeichert, um deren Abfrage nicht erneut wiederholen zu müssen und die Einwilligung entsprechend der gesetzlichen Verpflichtung nachweisen zu können. Die Speicherung kann serverseitig und/oder in einem Cookie (sogenanntes Opt-In-Cookie, bzw. mithilfe vergleichbarer Technologien) erfolgen, um die Einwilligung einem Nutzer, bzw. dessen Gerät zuordnen zu können. Vorbehaltlich individueller Angaben zu den Anbietern von Cookie-Management-Diensten, gelten die folgenden Hinweise: Die Dauer der Speicherung der Einwilligung kann bis zu zwei Jahren betragen. Hierbei wird ein pseudonymer Nutzer-Identifikator gebildet und mit dem Zeitpunkt der Einwilligung, Angaben zur Reichweite der Einwilligung (z. B. welche Kategorien von Cookies und/oder Diensteanbieter) sowie dem Browser, System und verwendeten Endgerät gespeichert; <b>Rechtsgrundlagen:</b> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO).
+</ul>'
+Provision.of.the.online.offer.and.web.hosting: 'Bereitstellung des Onlineangebotes und Webhosting'
+Provision.of.the.online.offer.and.web.hosting.content: 'Wir verarbeiten die Daten der Nutzer, um ihnen unsere Online-Dienste zur Verfügung stellen zu können. Zu diesem Zweck verarbeiten wir die IP-Adresse des Nutzers, die notwendig ist, um die Inhalte und Funktionen unserer Online-Dienste an den Browser oder das Endgerät der Nutzer zu übermitteln.
+<ul>
+<li><b>Verarbeitete Datenarten:</b>Nutzungsdaten (z.B. besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten); Meta-, Kommunikations- und Verfahrensdaten (z. B. IP-Adressen, Zeitangaben, Identifikationsnummern, Einwilligungsstatus).</li>
+<li><b>Betroffene Personen:</b>Nutzer (z.B. Webseitenbesucher, Nutzer von Onlinediensten).</li>
+<li><b>Zwecke der Verarbeitung:</b> Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit; Informationstechnische Infrastruktur (Betrieb und Bereitstellung von Informationssystemen und technischen Geräten (Computer, Server etc.).); Sicherheitsmaßnahmen.</li>
+<li><b>Rechtsgrundlagen:</b>Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</li>
+</ul>
+<b>Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:</b>
+<ul>
+<br>
+<li><b>Erhebung von Zugriffsdaten und Logfiles:</b></li>
+ Der Zugriff auf unser Onlineangebot wird in Form von so genannten "Server-Logfiles" protokolliert. Zu den Serverlogfiles können die Adresse und Name der abgerufenen Webseiten und Dateien, Datum und Uhrzeit des Abrufs, übertragene Datenmengen, Meldung über erfolgreichen Abruf, Browsertyp nebst Version, das Betriebssystem des Nutzers, Referrer URL (die zuvor besuchte Seite) und im Regelfall IP-Adressen und der anfragende Provider gehören. Die Serverlogfiles können zum einen zu Zwecken der Sicherheit eingesetzt werden, z.B., um eine Überlastung der Server zu vermeiden (insbesondere im Fall von missbräuchlichen Angriffen, sogenannten DDoS-Attacken) und zum anderen, um die Auslastung der Server und ihre Stabilität sicherzustellen; <b>Rechtsgrundlagen:</b> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO); <b>Löschung von Daten:</b> Logfile-Informationen werden für die Dauer von maximal 30 Tagen gespeichert und danach gelöscht oder anonymisiert. Daten, deren weitere Aufbewahrung zu Beweiszwecken erforderlich ist, sind bis zur endgültigen Klärung des jeweiligen Vorfalls von der Löschung ausgenommen.
+</ul>'
+Modification.and.update.of.the.privacy.policy: 'Änderung und Aktualisierung der Datenschutzerklärung'
+Modification.and.update.of.the.privacy.policy.content: 'Wir bitten Sie, sich regelmäßig über den Inhalt unserer Datenschutzerklärung zu informieren. Wir passen die Datenschutzerklärung an, sobald die Änderungen der von uns durchgeführten Datenverarbeitungen dies erforderlich machen. Wir informieren Sie, sobald durch die Änderungen eine Mitwirkungshandlung Ihrerseits (z.B. Einwilligung) oder eine sonstige individuelle Benachrichtigung erforderlich wird.
+
+Sofern wir in dieser Datenschutzerklärung Adressen und Kontaktinformationen von Unternehmen und Organisationen angeben, bitten wir zu beachten, dass die Adressen sich über die Zeit ändern können und bitten die Angaben vor Kontaktaufnahme zu prüfen.'
+Rights.of.the.data.subjects: 'Rechte der betroffenen Personen'
+Rights.of.the.data.subjects.content: 'Ihnen stehen als Betroffene nach der DSGVO verschiedene Rechte zu, die sich insbesondere aus Art. 15 bis 21 DSGVO ergeben:
+<ul>
+<br>
+<li><b>Widerspruchsrecht: Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten, die aufgrund von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling. Werden die Sie betreffenden personenbezogenen Daten verarbeitet, um Direktwerbung zu betreiben, haben Sie das Recht, jederzeit Widerspruch gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten zum Zwecke derartiger Werbung einzulegen; dies gilt auch für das Profiling, soweit es mit solcher Direktwerbung in Verbindung steht.</b></li>
+<li><b>Widerrufsrecht bei Einwilligungen:</b> Sie haben das Recht, erteilte Einwilligungen jederzeit zu widerrufen.</li>
+<li><b>Auskunftsrecht:</b>Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob betreffende Daten verarbeitet werden und auf Auskunft über diese Daten sowie auf weitere Informationen und Kopie der Daten entsprechend den gesetzlichen Vorgaben.</li>
+<li><b>Recht auf Berichtigung:</b>Sie haben entsprechend den gesetzlichen Vorgaben das Recht, die Vervollständigung der Sie betreffenden Daten oder die Berichtigung der Sie betreffenden unrichtigen Daten zu verlangen.</li>
+<li><b>Recht auf Löschung und Einschränkung der Verarbeitung:</b>Sie haben nach Maßgabe der gesetzlichen Vorgaben das Recht, zu verlangen, dass Sie betreffende Daten unverzüglich gelöscht werden, bzw. alternativ nach Maßgabe der gesetzlichen Vorgaben eine Einschränkung der Verarbeitung der Daten zu verlangen.</li>
+<li><b>Recht auf Datenübertragbarkeit:</b> Sie haben das Recht, Sie betreffende Daten, die Sie uns bereitgestellt haben, nach Maßgabe der gesetzlichen Vorgaben in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder deren Übermittlung an einen anderen Verantwortlichen zu fordern.</li>
+<li><b>Beschwerde bei Aufsichtsbehörde:</b>Sie haben unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs das Recht auf Beschwerde bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthaltsorts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes, wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die Vorgaben der DSGVO verstößt.</li>
+'
+Profil: 'Benutzerprofil'
+Password.change: "Passwort ändern"
+Reason.for.contact: 'Grund der Kontaktaufnahme *'
+Send: 'Senden'
+Your.contact.request: 'Ihre Kontaktanfrage !'
+Footer.contact: 'Kontakt'
+Consent.electronic.processing: 'Zustimmung zur elektronischen Verarbeitung der Daten *'
+Yes: 'Ja'
+No: 'Nein'
+Form.country: "Land *"
+Form.zipCode: "PLZ *"
+Form.city: "Ort *"
+Form.street: "Straße *"
+Form.houseNumber: "Hausnummer *"
+Form.comments: "Hinweise"
+Analysis: 'Auswertung'
+Stats.orders: 'Buchungen'
+Stats.seats: "Sitze"
+Stats.luggage: "Gepäckstücke"
+Form.filterTimeperiod: "Zeitraum berücksichtigen"
+Rental.agreements: 'Mietverträge'
+Cancel: 'Stornieren'
+Success.deleting.rental: 'Ihre Buchung wurde storniert! Sie erhalten in kürze eine E-Mail.'
+Cancelled: 'storniert'
+Email.cancelled.text: 'Ihre Buchung wurde storniert. <br> Wir freuen uns sie bald wieder bei uns begrüssen zu dürfen!'
+Email.deleting.rental: 'Ihre Buchung wurde storniert!'
+Success.deleting.rental.warning: 'Sind sie sicher, dass sie ihre Buchung stornieren möchten ?'
+Child.seat: 'Anzahl der Kindersitze'
+No.bookable.child.seat: 'Keine Kindersizte buchbar'
+Stats.startTime: "Startzeit"
+Stats.endTime: "Endzeit"
+Stats.submit: "Abschicken"

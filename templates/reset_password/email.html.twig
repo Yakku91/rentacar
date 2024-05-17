@@ -1,0 +1,11 @@
+{% extends 'emails/email_base.html.twig' %}
+
+{% block body %}
+    <h1>Hi {{ user.getFirstName() }},</h1>
+
+    <p>{{ "Email.passwordReset.text" | trans }} {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}
+        .</p>
+
+    <p><a href="{{ url('app_reset_password', {token: resetToken.token}) }}">{{ url('app_reset_password', {token: resetToken.token}) }}</a></p>
+    <br>
+{% endblock %}

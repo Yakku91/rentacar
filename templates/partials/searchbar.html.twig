@@ -1,0 +1,74 @@
+<form class="row align-items-center justify-content-lg-end" action="{{ path('list_cars') }}" method="post">
+    <div class="row">
+        <div class="col-auto">
+            <div class="form-check form-check-inline form-check-reverse">
+                <input class="form-check-input" type="checkbox" name="sedan" value="Limousine">
+                <label class="form-check-label" for="inlineCheckbox1">{{ 'Limousine' | trans }}</label>
+            </div>
+            <div class="form-check form-check-inline form-check-reverse">
+                <input class="form-check-input" type="checkbox" name="station_wagon" value="Kombi">
+                <label class="form-check-label" for="inlineCheckbox1">{{ 'Kombi' | trans }}</label>
+            </div>
+            <div class="form-check form-check-inline form-check-reverse">
+                <input class="form-check-input" type="checkbox" name="suv" value="Geländewagen">
+                <label class="form-check-label" for="inlineCheckbox1">{{ 'Geländewagen' | trans }}</label>
+            </div>
+            <div class="form-check form-check-inline form-check-reverse">
+                <input class="form-check-input" type="checkbox" name="van" value="Minibus">
+                <label class="form-check-label" for="inlineCheckbox1">{{ 'Minibus' | trans }}</label>
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                {{ 'Form.search.timePeriod' | trans }}
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <label for="startTime" class="fw-bold">{{ 'Form.delivery.datetime' | trans }}</label>
+                                <input type="datetime-local" id="startTime" name="startTime">
+                            </div>
+                            <br>
+                            <div class="row">
+                                <label for="endTime" class="fw-bold">{{ 'Form.return.datetime' | trans }}</label>
+                                <input type="datetime-local" id="endTime" name="endTime">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary"
+                                    data-bs-dismiss="modal">{{ 'Save' | trans }}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-auto">
+            <div class="input-group">
+                <input type="text" class="form-control form-control-sm" name="searchfield">
+                <button class="btn btn-primary btn-sm" type="submit"
+                        id="button-addon2">{{ 'Btn.search' | trans }}</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    window.addEventListener('load', () => {
+        var now = new Date();
+
+        now.setMilliseconds(null)
+        now.setSeconds(null)
+        now.setMinutes(null)
+        now.setHours(null)
+
+        document.getElementById('startTime').min = now.toISOString().slice(0, -1);
+        document.getElementById('endTime').min = now.toISOString().slice(0, -1);
+    });
+</script>

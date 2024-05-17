@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col pt-3">
+                <table class="table table-striped" id="cancelList">
+                    <thead>
+                    <tr>
+                        <th>{{ 'Fullname' | trans }}</th>
+                        <th>{{ 'Starttime' | trans }}</th>
+                        <th>{{ 'Endtime' | trans }}</th>
+                        <th>{{ 'Car' | trans }}</th>
+                        <th>{{ 'Extras' | trans }}</th>
+                        <th data-sortable="false">{{ 'Cancel' | trans }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for order in rentals %}
+                    <tr>
+                        <td>{{ order.getFirstname }} {{ order.getLastname }}</td>
+                        <td data-sort="{{ order.getStartdate| date('Y-m-dTH:i') }}">{{ order.getStartdate | date("d.m.Y H:i") }} </td>
+                        <td data-sort="{{ order.getEnddate| date('Y-m-dTH:i') }}">{{ order.getEnddate | date("d.m.Y H:i") }} </td>
+                        <td>{{ order.getCar().getName }} </td>
+                        <td>{% if order.hasCarSeat %}{{ 'Form.car.seat' | trans }}{% endif %}{% if order.hasCarSeat and order.hasDogCage %}, {% endif %}{% if order.hasDogCage %}{{ 'Form.dog.cage'| trans }} {% endif %}</td>
+                        <td>
+                            <form method="post" action="{{ path('rental_agreement') }}">
+                                <button type="submit"
+                                        name="id" {% if order.cancelable %} {% else %} disabled {% endif %}
+                                        onclick="return confirm('{{ 'Success.deleting.rental.warning' | trans }}')"
+                                        value="{{ order.id }}" class="btn btn-danger btn-sm">{{ 'Cancel' | trans }}</button>
+                            </form>
+                        </td>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% if app.request.locale == 'de' %}
+        <script>
+
+            $(document).ready(function () {
+                $('#cancelList').DataTable(
+                    {
+                        "lengthMenu": [5, 10, 20, 50, 100],
+                        order: [[
+                            2, 'asc'
+                        ]],
+                        language: {
+                            url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/de-DE.json',
+                        },
+                        "searching": false,
+                        "info": false,
+                    }
+                );
+            });
+        </script>
+    {% else %}
+        <script>
+            $(document).ready(function () {
+                $('#cancelList').DataTable(
+                    {
+                        "lengthMenu": [5, 10, 20, 50, 100],
+                        order: [[
+                            2, 'asc'
+                        ]],
+                        "searching": false,
+                        "info": false,
+                    }
+                );
+            });
+        </script>
+    {% endif %}
+{% endblock %}

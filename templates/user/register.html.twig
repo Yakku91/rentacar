@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+{% block title %}Mobilmacher - {{ 'Register' | trans }}{% endblock %}
+{% block searchbar %}{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+                {{ form_start(form) }}
+                <div class="my-custom-class-for-errors">
+                    {{ form_errors(form) }}
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        {{ form_row(form.formOfAddress) }}
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        {{ form_row(form.firstName) }}
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4" id="some-custom-id">
+                        {{ form_row(form.lastName) }}
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    {{ form_row(form.email) }}
+                </div>
+                <div class="col-12 col-md-6">
+                    {{ form_row(form.phoneNumber) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-5">
+                    {{ form_row(addressForm.country) }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-2">
+                    {{ form_row(addressForm.zipCode) }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-5">
+                    {{ form_row(addressForm.city) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-5">
+                    {{ form_row(addressForm.street) }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-2">
+                    {{ form_row(addressForm.houseNumber) }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-5">
+                    {{ form_row(addressForm.comments) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {{ form_row(form.preferredMethodOfPayment) }}
+                </div>
+            </div>
+                {{ form_end(form) }}
+        </div>
+    </div>
+
+{% endblock %}

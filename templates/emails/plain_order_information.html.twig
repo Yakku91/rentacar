@@ -1,0 +1,46 @@
+{% block information %}
+
+    {% set countDogeCage = '' %}
+    {% if order.dogCage == false %}
+        {% set countDogeCage = 'Email.not.ordered'|trans %}
+    {% else %}
+        {% set countDogeCage = 'Email.one.dogbox'|trans %}
+    {% endif %}
+
+    {% set countCarSeat = '' %}
+    {% if order.carSeat == false %}
+        {% set countCarSeat = 'Email.not.ordered'|trans %}
+    {% else %}
+        {% set countCarSeat = 'Email.one.carseat'|trans %}
+    {% endif %}
+
+
+
+    <h2>{{ 'ContactInformation'| trans }}</h2>
+    <p>{{ 'Firstname'|trans }}: {{ order.firstName }}</p>
+    <p>{{ 'Lastname'|trans }}: {{ order.lastName }}</p>
+    <p>Email: {{ order.email }}</p>
+    <p>{{ 'Phonenumber'|trans }}: {{ order.phoneNumber }}</p>
+    <p>{{ 'Form.payment.method'|trans }}: {{ order.methodOfPayment|trans }}</p>
+
+    <h2>{{ 'Email.orderinformation'|trans }}:</h2>
+    <p>{{ 'Email.ordernumber'|trans }}: {{ order.id }}</p>
+    <p>{{ 'Email.vehicle'|trans }}: <a href="{{ url('show_details', {car: order.car.id }) }}">{{ order.car.name }}</a>
+    </p>
+    <p>{{ 'Email.delivery.datetime'|trans }}: {{ order.startDate|date('l d M Y H:i') }}</p>
+    <p>{{ 'Email.return.datetime'| trans }}: {{ order.endDate|date('l d M Y H:i') }}</p>
+    <p>{{ 'Email.total.time'|trans }}: {{ order.getTotalTime()|date('%a Tage') }}</p>
+    <p>{{ 'Form.dog.cage'|trans }}: {{ countDogeCage }}</p>
+    <p>{{ 'Form.car.seat'|trans }}: {{ countCarSeat }}</p>
+    <p>{{ 'Km.inclusive'|trans }}: {{ order.car.includedKilometres }}</p>
+    {% if order.deliveryAddress is not null %}
+    <p> {{ 'Email.delivery.location'|trans }}:
+        {{ order.deliveryAddress.street ~ ' ' ~ order.deliveryAddress.houseNumber ~ ', ' ~
+        order.deliveryAddress.zipCode ~ ', ' ~ order.deliveryAddress.city ~ ', ' ~ order.deliveryAddress.country }}
+    </p>
+    {% else %}
+    <p> {{ 'Email.delivery.location'|trans }}:
+        {{ 'Lieferort unbekannt' }}
+    </p>
+    {% endif %}
+{% endblock %}

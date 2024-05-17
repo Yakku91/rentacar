@@ -1,0 +1,219 @@
+{% extends 'base.html.twig' %}
+{% block searchbar %}{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {{ form_start(form) }}
+            <div class="my-custom-class-for-errors">
+                {{ form_errors(form) }}
+            </div>
+            <div class="row">
+                <div class="col">
+                    {{ form_row(form.startDate) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.endDate) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col ">
+                    <button type="submit"
+                            class="btn btn-primary float-center float-md-end">{{ 'Stats.submit' | trans }}</button>
+                </div>
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+
+        <p>{{ 'Stats.orders' | trans }}: {{ count }}</p>
+        {% if cars %}
+            <table class="table table-striped" id="car-table">
+                <thead>
+                <tr>
+                    <th scope="col" class="col-8">{{ 'Car' | trans }}</th>
+                    <th scope="col">{{ 'Stats.orders' | trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for car, number in cars %}
+                    <tr>
+                        <td>{{ car }}</td>
+                        <td>{{ number }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+        {% if categories %}
+            <table class="table table-striped" id="category-table">
+                <thead>
+                <tr>
+                    <th scope="col" class="col-8">{{ 'Category' | trans }}</th>
+                    <th scope="col">{{ 'Stats.orders' | trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for category, number in categories %}
+                    <tr>
+                        <td>{{ category | trans }}</td>
+                        <td>{{ number }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+        {% if seats %}
+            <table class="table table-striped" id="seat-table">
+                <thead>
+                <tr>
+                    <th scope="col" class="col-8">{{ 'Stats.seats' | trans }}</th>
+                    <th scope="col">{{ 'Stats.orders' | trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for seats, number in seats %}
+                    <tr>
+                        <td>{{ seats }}</td>
+                        <td>{{ number }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+        {% if luggage %}
+            <table class="table table-striped" id="luggage-table">
+                <thead>
+                <tr>
+                    <th scope="col" class="col-8">{{ 'Stats.luggage' | trans }}</th>
+                    <th scope="col">{{ 'Stats.orders' | trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for luggage, number in luggage %}
+                    <tr>
+                        <td>{{ luggage }}</td>
+                        <td>{{ number }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+        {% if cars %}
+            <table class="table table-striped" id="extras-table">
+                <thead>
+                <tr>
+                    <th scope="col" class="col-8">Extra</th>
+                    <th scope="col">{{ 'Stats.orders' | trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{ 'Form.car.seat' | trans }}</td>
+                    <td>{{ extras['carSeat'] | trans }}</td>
+
+                </tr>
+                <tr>
+                    <td>{{ 'Form.dog.cage' | trans }}</td>
+                    <td>{{ extras['dogCage'] }}</td>
+                </tr>
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+
+    <script>
+        {% if app.request.locale == 'de' %}
+        $(document).ready(function () {
+            $('#extras-table').DataTable(
+                {
+                    "lengthMenu": [10, 20, 30, 40, 50],
+                    language: {
+                        url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/de-DE.json',
+                    },
+                    "searching": false,
+                    "info": false,
+                }
+            );
+            $('#luggage-table').DataTable(
+                {
+                    "lengthMenu": [10, 20, 30, 40, 50],
+                    language: {
+                        url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/de-DE.json',
+                    },
+                    "searching": false,
+                    "info": false,
+                }
+            );
+            $('#seat-table').DataTable(
+                {
+                    "lengthMenu": [10, 20, 30, 40, 50],
+                    language: {
+                        url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/de-DE.json',
+                    },
+                    "searching": false,
+                    "info": false,
+                }
+            );
+            $('#category-table').DataTable(
+                {
+                    "lengthMenu": [10, 20, 30, 40, 50],
+                    language: {
+                        url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/de-DE.json',
+                    },
+                    "searching": false,
+                    "info": false,
+                }
+            );
+            $('#car-table').DataTable(
+                {
+                    "lengthMenu": [10, 20, 30, 40, 50],
+                    language: {
+                        url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/de-DE.json',
+                    },
+                    "searching": false,
+                    "info": false,
+                }
+            );
+        });
+
+        {% else %}
+        $(document).ready(function () {
+            $('#extras-table').DataTable(
+                {
+                    "lengthMenu": [10, 20, 30, 40, 50],
+                    "searching": false,
+                    "info": false,
+                }
+            );
+            $('#luggage-table').DataTable(
+                {
+                    "lengthMenu": [10, 20, 30, 40, 50],
+                    "searching": false,
+                    "info": false,
+                }
+            );
+            $('#seat-table').DataTable(
+                {
+                    "lengthMenu": [10, 20, 30, 40, 50],
+                    "searching": false,
+                    "info": false,
+                }
+            );
+            $('#category-table').DataTable(
+                {
+                    "lengthMenu": [10, 20, 30, 40, 50],
+                    "searching": false,
+                    "info": false,
+                }
+            );
+            $('#car-table').DataTable(
+                {
+                    "lengthMenu": [10, 20, 30, 40, 50],
+                    "searching": false,
+                    "info": false,
+                }
+            );
+        });
+        {% endif %}
+    </script>
+{% endblock %}

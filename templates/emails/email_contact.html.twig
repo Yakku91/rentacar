@@ -1,0 +1,18 @@
+{% extends 'emails/email_base.html.twig' %}
+
+{% block body %}
+
+    <p>{{ 'Email.contact.text'|trans|raw }}</p>
+    <br>
+    <p>{{ 'Name' | trans  }} : {{ contact.firstName }} {{ contact.lastName}}</p>
+    <p>{{ 'Email' | trans  }} : {{ contact.eMail}}</p>
+    <p>{{ 'Phonenumber' | trans  }} : {{ contact.phoneNumber}}</p>
+    <p>{{ 'Message' | trans  }} : {{ contact.message }}</p>
+
+    <hr>
+
+{% endblock %}
+
+{% block information %}
+
+{% endblock %}

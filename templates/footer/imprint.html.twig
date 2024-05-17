@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block searchbar %}{% endblock %}
+
+{% block title %}Mobilmacher - Impressum{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <p>{{ 'Serviceprovider' | trans }} </p><br>
+        <p>{{ 'Contact.provider' | trans }} </p>
+        <p>{{ 'Emailaddress.provider' | trans }} </p>
+        <p>{{ 'Managing' | trans }} </p>
+        <p>{{ 'Registrycourt' | trans }} </p>
+        <p>{{ 'Commercialregister' | trans }} </p>
+        <p>{{ 'USt-ID-Nr.' | trans }} </p> <br>
+        <p>{{ 'Imprinttext' | trans }} </p>
+        <a href="{{ path('homepage') }}">{{ 'Back.to.homepage' | trans }}</a>
+
+    </div>
+{% endblock %}
+

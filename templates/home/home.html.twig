@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <table class="table table-striped" id="homeTable">
+            <thead>
+            <tr>
+                <th>{{ 'Name' | trans }}</th>
+                <th>{{ 'Category' | trans }}</th>
+                <th>{{ 'Price.per.day' | trans }}</th>
+                <th data-sortable="false">Details</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for car in cars %}
+                <tr>
+                    <td>{{ car.getName() }}</td>
+                    <td>{{ car.getCategory() | trans }}</td>
+                    {% if app.request.locale == 'de' %}
+                        <td>{{ car.getPricePerDay() | number_format(2, ',', ',') }} €</td>
+                    {% else %}
+                        <td>{{ car.getPricePerDay() | format_currency('EUR') }} </td>
+                    {% endif %}
+                    <td><a href="{{ path('show_details', {car: car.id}) }}" class="btn btn-primary btn-sm">
+                            {{ 'Btn.show.details'| trans }}
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% if app.request.locale == 'de' %}
+        <script>
+            $(document).ready(function () {
+                $('#homeTable').DataTable(
+                    {
+                        "lengthMenu": [10, 20, 30, 40, 50],
+                        language: {
+                            url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/de-DE.json',
+                        },
+                        "searching": false,
+                        "info": false,
+                    }
+                );
+            });
+        </script>
+    {% else %}
+        <script>
+            $(document).ready(function () {
+                $('#homeTable').DataTable(
+                    {
+                        "lengthMenu": [10, 20, 30, 40, 50],
+                        "searching": false,
+                        "info": false,
+                    }
+                );
+            });
+        </script>
+    {% endif %}
+{% endblock %}
